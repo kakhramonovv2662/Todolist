@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todolist</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-light">
+    <div class="container">
+      <!-- Title -->
+      <h1 class="text-center my-4">Todos</h1>
+
+      <!-- Form -->
+      <form
+        class="d-flex w-50 mx-auto mb-4 js-form"
+        spellcheck="false"
+        autocomplete="off"
+      >
+        <input
+          class="form-control js-input"
+          type="text"
+          placeholder="Todo"
+          name="todo-name"
+          required
+        />
+        <button type="submit" class="btn btn-success ml-4 w-25">Add</button>
+      </form>
+
+      <!-- Todo List -->
+      <div class="bg-white w-50 mx-auto border rounded p-3">
+        <span class="d-inline-block mb-3"
+          >Count: <strong class="js-counter">0</strong></span
+        >
+        <ul class="list-unstyled m-0 p-0 js-list"></ul>
+      </div>
+    </div>
+
+    <template id="todo-template">
+      <li class="d-flex align-items-center justify-content-between mb-2 js-item">
+        <div class="form-check">
+          <input class="form-check-input js-input js-checkbox" type="checkbox" id="todo-complated" />
+          <label class="form-check-label js-label" for="todo-complated"></label>
+        </div>
+        <button class="btn btn-danger js-delete-btn">Delete</button>
+      </li>
+    </template>
+    
+    <script src="js/utils.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
